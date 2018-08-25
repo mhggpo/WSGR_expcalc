@@ -1,12 +1,11 @@
 ﻿Class MainWindow
-    Dim expfrom, expto, needexp, onceexp, times As Long
+    Dim expfrom, expto, needexp, onceexp, onceexp1, onceexp2, times As Long
     Dim jianniangexp(111) As Long
     Dim flagship, train, mvp, shengjian, bread, laibixi, ke, baiyan, baiyane, baiyannoe, lanli, lanliu, lanlinou, xiangqu As Boolean
 
     Private Sub button2_Click(sender As Object, e As RoutedEventArgs) Handles button2.Click
         End
     End Sub
-
     Private Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.Click
         MsgBox("程序开发:mhggpo 0v0" & vbCrLf & "经验表来源于舰Rwiki,感谢dalao 0v0" & vbCrLf & "计算原理来自舰少资料库,感谢dalao 0v0" & vbCrLf & "软件最新版本参见台服吧 0v0", vbInformation, "昆昆提示")
     End Sub
@@ -157,6 +156,21 @@
         jianniangexp(108) = 1809900
         jianniangexp(109) = 1881700
         jianniangexp(110) = 1953500
+        If Val(textBoxfrom.Text) >= 1 And Val(textBoxfrom.Text) <= Val(textBoxto.Text) Then
+        Else
+            MsgBox(“输入有误，请重新输入！”, vbInformation)
+            Exit Sub
+        End If
+        If Val(textBoxto.Text) <= 110 And Val(textBoxfrom.Text) <= Val(textBoxto.Text) Then
+        Else
+            MsgBox(“输入有误，请重新输入！”, vbInformation)
+            Exit Sub
+        End If
+        If Val(mvpcalc.Text) >= 0 And Val(mvpcalc.Text) <= 100 Then
+        Else
+            MsgBox(“输入有误，请重新输入！”, vbInformation)
+            Exit Sub
+        End If
         If (CInt(textBoxfrom.Text) > 110) Then
             MsgBox("FA♂Q", vbCritical)
             textBoxfrom.Text = 1
@@ -278,7 +292,7 @@ Input1:
                 If temp1 = "0" Then MsgBox("昆昆才不会被骗去1-5吃土呢！", vbInformation) : GoTo Input1
                 onceexp = Val(temp1)
                 If onceexp = 0 Then MsgBox("昆昆才不会被骗去1-5吃土呢！", vbInformation) : GoTo Input1
-                    Case 34
+            Case 34
                 stage = "历史战役(困难)"
                 onceexp = 333
         End Select
@@ -319,9 +333,13 @@ Input1:
         If (flagship And Not mvp) Then
             onceexp = onceexp * 1.5
         ElseIf (Not flagship And mvp) Then
-            onceexp = onceexp * 2
+            onceexp1 = onceexp * 2
+            onceexp2 = ((onceexp1 * Val(mvpcalc.Text)) + (onceexp * (100 - (Val(mvpcalc.Text))))) * 0.01
+            onceexp = onceexp2
         ElseIf (flagship And mvp) Then
-            onceexp = onceexp * 3
+            onceexp1 = onceexp * 2
+            onceexp2 = ((onceexp1 * Val(mvpcalc.Text)) + (onceexp * (100 - (Val(mvpcalc.Text))))) * 0.01
+            onceexp = onceexp2 * 1.5
         End If
         If (train) Then
             onceexp = onceexp * 1.07
@@ -350,7 +368,7 @@ Input1:
             showtext1 = ""
         End If
         If (mvp) Then
-            showtext2 = "MVP"
+            showtext2 = "MVP概率" & mvpcalc.Text & "%"
         Else
             showtext2 = ""
         End If

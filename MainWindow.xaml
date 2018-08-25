@@ -3,17 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore"
         xmlns:local="clr-namespace:经验计算"
         mc:Ignorable="d"
-        Title="经验计算器 ver 1.6" Height="600" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="20180221040238918_easyicon_net_96.ico">
+        Title="经验计算器 ver 1.7" Height="600" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="20180221040238918_easyicon_net_96.ico">
     <Grid Margin="0,0,-175,-118">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <GroupBox x:Name="groupBox3" Header="额外计算条件" Height="365" Margin="28,34,0,0" Width="258" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <GroupBox x:Name="groupBox1" Header="技能BUFF区" HorizontalAlignment="Left" Margin="41,113,0,0" VerticalAlignment="Top" Height="168" Width="194"/>
-        <TextBox x:Name="textBoxfrom" HorizontalAlignment="Left" Height="23" Margin="314,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" Text="1"/>
-        <TextBox x:Name="textBoxto" HorizontalAlignment="Left" Height="23" Margin="402,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" Text="110"/>
+        <TextBox x:Name="textBoxfrom" HorizontalAlignment="Left" Height="23" Margin="314,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" Text="1" input:InputMethod.IsInputMethodEnabled="False"/>
+        <TextBox x:Name="textBoxto" HorizontalAlignment="Left" Height="23" Margin="402,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" Text="110" input:InputMethod.IsInputMethodEnabled="False"/>
+        <TextBox x:Name="mvpcalc" HorizontalAlignment="Left" Height="23" Margin="200,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" Text="100" input:InputMethod.IsInputMethodEnabled="False"/>
         <Label x:Name="label" Content="从" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="292,64,0,0"/>
         <Label x:Name="label_Copy" Content="到" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="375,64,0,0"/>
         <CheckBox x:Name="train1" Content="舰队训练Lv3（宁海改）" HorizontalAlignment="Left" Height="19" Margin="50,158,0,0" VerticalAlignment="Top" Width="150"/>
@@ -78,7 +80,9 @@
             <ListBoxItem Content="C败"/>
             <ListBoxItem Content="D败"/>
         </ComboBox>
-        <GroupBox x:Name="groupBox" Header="脸区" HorizontalAlignment="Left" Height="57" Margin="41,50,0,0" VerticalAlignment="Top" Width="194"/>
+        <GroupBox x:Name="groupBox" Header="脸区" HorizontalAlignment="Left" Height="57" Margin="41,50,0,0" VerticalAlignment="Top" Width="240">
+            <Label x:Name="label1" Content="%" HorizontalAlignment="Left" Height="100" Margin="192.6,16.237,0,-82.074" VerticalAlignment="Top"/>
+        </GroupBox>
         <GroupBox x:Name="groupBox2" Header="自带BUFF区" HorizontalAlignment="Left" Height="109" Margin="41,286,0,0" VerticalAlignment="Top" Width="171"/>
         <Label x:Name="label_Copy5" Content="舰娘" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="303,37,0,0"/>
         <GroupBox x:Name="groupBox4" Header="主要计算条件" HorizontalAlignment="Left" Height="84" Margin="286,23,0,0" VerticalAlignment="Top" Width="510"/>
@@ -89,5 +93,6 @@
                 <ImageBrush ImageSource="pic1.jpg"/>
             </Image.OpacityMask>
         </Image>
+        <Label x:Name="label2" Content="MVP概率(整数):" HorizontalAlignment="Left" Margin="106,81.163,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
