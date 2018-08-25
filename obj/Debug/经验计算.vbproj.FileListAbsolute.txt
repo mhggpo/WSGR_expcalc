@@ -1,0 +1,32 @@
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\bin\Debug\经验计算.exe.config
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\bin\Debug\经验计算.exe
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\bin\Debug\经验计算.pdb
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\bin\Debug\经验计算.xml
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\obj\Debug\经验计算.vbprojResolveAssemblyReference.cache
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\obj\Debug\MainWindow.g.vb
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\obj\Debug\Application.g.vb
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\obj\Debug\经验计算_MarkupCompile.cache
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\obj\Debug\经验计算_MarkupCompile.lref
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\obj\Debug\MainWindow.baml
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\obj\Debug\经验计算.g.resources
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\obj\Debug\经验计算.Resources.resources
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\obj\Debug\经验计算.vbproj.GenerateResource.Cache
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\obj\Debug\经验计算.exe
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\obj\Debug\经验计算.xml
+i:\my documents\visual studio 2015\Projects\经验计算\经验计算\obj\Debug\经验计算.pdb
+E:\经验计算\经验计算\bin\Debug\经验计算.exe.config
+E:\经验计算\经验计算\obj\Debug\经验计算.exe
+E:\经验计算\经验计算\obj\Debug\经验计算.xml
+E:\经验计算\经验计算\obj\Debug\经验计算.pdb
+E:\经验计算\经验计算\bin\Debug\经验计算.exe
+E:\经验计算\经验计算\bin\Debug\经验计算.pdb
+E:\经验计算\经验计算\bin\Debug\经验计算.xml
+E:\经验计算\经验计算\obj\Debug\经验计算.vbprojResolveAssemblyReference.cache
+E:\经验计算\经验计算\obj\Debug\MainWindow.g.vb
+E:\经验计算\经验计算\obj\Debug\Application.g.vb
+E:\经验计算\经验计算\obj\Debug\经验计算_MarkupCompile.cache
+E:\经验计算\经验计算\obj\Debug\经验计算_MarkupCompile.lref
+E:\经验计算\经验计算\obj\Debug\MainWindow.baml
+E:\经验计算\经验计算\obj\Debug\经验计算.g.resources
+E:\经验计算\经验计算\obj\Debug\经验计算.Resources.resources
+E:\经验计算\经验计算\obj\Debug\经验计算.vbproj.GenerateResource.Cache
