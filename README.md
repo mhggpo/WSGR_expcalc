@@ -11,6 +11,9 @@
 3.仅支持Windows平台。
 ### 系统要求
 任意一台安装.NET3.0框架及更高版本的Windows计算机
+### 感谢名单
+经验表来源于舰Rwiki,感谢dalao
+计算原理来自舰少资料库,感谢dalao
 ### 下载
 - 直接到"\bin\Debug\"文件夹内寻找最新编译版本(推荐)
 - [百度云](https://pan.baidu.com/s/1_rFDiBhbmew01EnYVltsfQ)
