@@ -330,6 +330,8 @@ Input1:
         baiyane = radioButton5.IsChecked And radioButton5.IsEnabled
         baiyannoe = radioButton6.IsChecked And radioButton6.IsEnabled
         xiangqu = xiangqu1.IsChecked And xiangqu1.IsEnabled
+        Dim tempforke As Long
+        tempforke = onceexp
         If (flagship And Not mvp) Then
             onceexp = onceexp * 1.5
         ElseIf (Not flagship And mvp) Then
@@ -349,9 +351,6 @@ Input1:
         End If
         If (bread) Then
             onceexp = onceexp * 1.1
-        End If
-        If (ke) Then
-            onceexp = onceexp * 2
         End If
         If (baiyan And baiyane) Then
             onceexp = onceexp * 1.1
@@ -374,9 +373,13 @@ Input1:
         End If
         If (shengjian) Then
             onceexp = onceexp * 1.5
+            tempforke = tempforke * 1.5
             showtext3 = "经验加成15%"
         Else
             showtext3 = ""
+        End If
+        If (ke) Then
+            onceexp = onceexp + tempforke
         End If
         times = needexp / onceexp
         MsgBox("充满智慧的昆西掐指一算：" & "由等级" & textBoxfrom.Text & "升级至" & textBoxto.Text & "，共需经验值" & needexp & vbCrLf & "刷" & stage & "关卡的单个节点，在保持" & showtext1 & showtext2 & showtext3 & "战后" & showtext4 & "评价前提下," & vbCrLf & "一次经验" & onceexp & "，需要次数：" & times, vbInformation, "昆昆提示")

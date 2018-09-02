@@ -34,3 +34,15 @@ D:\用户目录\Documents\GitHub\WSGR_expcalc\obj\Debug\MainWindow.baml
 D:\用户目录\Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算.g.resources
 D:\用户目录\Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算.Resources.resources
 D:\用户目录\Documents\GitHub\WSGR_expcalc\obj\Debug\WSGR_expcalc.vbproj.GenerateResource.Cache
+E:\经验计算\WSGR_expcalc\bin\Debug\经验计算.exe
+E:\经验计算\WSGR_expcalc\bin\Debug\经验计算.pdb
+E:\经验计算\WSGR_expcalc\bin\Debug\经验计算.xml
+E:\经验计算\WSGR_expcalc\obj\Debug\WSGR_expcalc.vbprojResolveAssemblyReference.cache
+E:\经验计算\WSGR_expcalc\obj\Debug\MainWindow.g.vb
+E:\经验计算\WSGR_expcalc\obj\Debug\Application.g.vb
+E:\经验计算\WSGR_expcalc\obj\Debug\经验计算_MarkupCompile.cache
+E:\经验计算\WSGR_expcalc\obj\Debug\经验计算_MarkupCompile.lref
+E:\经验计算\WSGR_expcalc\obj\Debug\MainWindow.baml
+E:\经验计算\WSGR_expcalc\obj\Debug\经验计算.g.resources
+E:\经验计算\WSGR_expcalc\obj\Debug\经验计算.Resources.resources
+E:\经验计算\WSGR_expcalc\obj\Debug\WSGR_expcalc.vbproj.GenerateResource.Cache
