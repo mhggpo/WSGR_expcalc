@@ -1,6 +1,8 @@
 ### WSGR_expcalc
 基于VB的“战舰少女R”经验计算器
 ### 版本信息
+## ver 1.71（2018/9/2）
+1. 修复了“港区的教材”的计算逻辑，以舰R百科经验表为准。
 ## ver 1.7（2018/8/25）
 1. 增加了MVP的概率作为计算参数。
 2. 修复了一些bug。
@@ -22,7 +24,7 @@
  经验表来源于舰Rwiki,感谢dalao
  计算原理来自舰少资料库,感谢dalao
 ### 下载
-- 直接到"\bin\Debug\"文件夹内寻找最新编译版本(推荐)
+- 直接到"\bin\Release\"文件夹内寻找最新编译版本(推荐)
 - [百度云](https://pan.baidu.com/s/1_rFDiBhbmew01EnYVltsfQ)
  Enjoy it:) |v0
 
