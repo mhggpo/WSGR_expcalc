@@ -14,3 +14,19 @@ E:\经验计算\WSGR_expcalc\obj\Release\经验计算.exe
 E:\经验计算\WSGR_expcalc\obj\Release\经验计算.xml
 E:\经验计算\WSGR_expcalc\obj\Release\经验计算.pdb
 E:\经验计算\WSGR_expcalc\obj\Release\WSGR_expcalc.vbprojResolveAssemblyReference.cache
+K:\My Documents\GitHub\WSGR_expcalc\bin\Release\经验计算.exe.config
+K:\My Documents\GitHub\WSGR_expcalc\obj\Release\经验计算.exe
+K:\My Documents\GitHub\WSGR_expcalc\obj\Release\经验计算.xml
+K:\My Documents\GitHub\WSGR_expcalc\obj\Release\经验计算.pdb
+K:\My Documents\GitHub\WSGR_expcalc\bin\Release\经验计算.exe
+K:\My Documents\GitHub\WSGR_expcalc\bin\Release\经验计算.pdb
+K:\My Documents\GitHub\WSGR_expcalc\bin\Release\经验计算.xml
+K:\My Documents\GitHub\WSGR_expcalc\obj\Release\WSGR_expcalc.vbprojResolveAssemblyReference.cache
+K:\My Documents\GitHub\WSGR_expcalc\obj\Release\MainWindow.g.vb
+K:\My Documents\GitHub\WSGR_expcalc\obj\Release\Application.g.vb
+K:\My Documents\GitHub\WSGR_expcalc\obj\Release\经验计算_MarkupCompile.cache
+K:\My Documents\GitHub\WSGR_expcalc\obj\Release\经验计算_MarkupCompile.lref
+K:\My Documents\GitHub\WSGR_expcalc\obj\Release\MainWindow.baml
+K:\My Documents\GitHub\WSGR_expcalc\obj\Release\经验计算.g.resources
+K:\My Documents\GitHub\WSGR_expcalc\obj\Release\经验计算.Resources.resources
+K:\My Documents\GitHub\WSGR_expcalc\obj\Release\WSGR_expcalc.vbproj.GenerateResource.Cache
