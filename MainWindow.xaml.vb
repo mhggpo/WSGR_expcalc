@@ -789,10 +789,10 @@ Input3:
                     onceexp = onceexp * 0.8
                 Case 2
                     showtext4 = "A"
-                    onceexp = onceexp * 1
+                    onceexp = onceexp * 0.5
                 Case 3
                     showtext4 = "B"
-                    onceexp = onceexp * 0.5
+                    onceexp = onceexp * 0
                 Case 4
                     showtext4 = "C"
                     onceexp = onceexp * 0
