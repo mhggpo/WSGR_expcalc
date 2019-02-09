@@ -771,7 +771,7 @@ Input1:
                     stage = "自定义"
                     Dim temp1 As String
 Input3:
-                    temp1 = InputBox("请输入关卡基础经验(即A胜经验)", "昆昆提示")
+                    temp1 = InputBox("请输入关卡基础经验(即SS胜经验)", "昆昆提示")
                     If temp1 = "" Then MsgBox("哼，居然想用空白的条件来忽悠昆西╭(╯^╰)╮，不可原谅！", vbInformation) : GoTo Input3
                     If temp1 = "0" Then MsgBox("这样的条件下是没有提督经验的哦(⊙o⊙)", vbInformation) : GoTo Input3
                     onceexp = Val(temp1)
