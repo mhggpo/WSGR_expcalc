@@ -59,6 +59,15 @@
             baiyan1.IsEnabled = True
         End If
     End Sub
+    Function FindMax(ByVal num1 As Integer, ByVal num2 As Integer) As Integer
+        Dim result As Integer
+        If (num1 > num2) Then
+            result = num1
+        Else
+            result = num2
+        End If
+        FindMax = result
+    End Function
     Private Sub button_Click(sender As Object, e As RoutedEventArgs) Handles button.Click
         If type1.IsChecked = True Then
             jianniangexp(0) = 0
@@ -294,6 +303,9 @@
                     stage = "7-5"
                     onceexp = 560
                 Case 33
+                    stage = "8-1"
+                    onceexp = 600
+                Case 34
                     stage = "自定义"
                     Dim temp1 As String
 Input1:
@@ -768,6 +780,9 @@ Input1:
                     stage = "7-5"
                     onceexp = 190
                 Case 33
+                    stage = "8-1"
+                    onceexp = 190
+                Case 34
                     stage = "自定义"
                     Dim temp1 As String
 Input3:
