@@ -62,3 +62,19 @@ K:\My Documents\GitHub\WSGR_expcalc\obj\Debug\MainWindow.baml
 K:\My Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算.g.resources
 K:\My Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算.Resources.resources
 K:\My Documents\GitHub\WSGR_expcalc\obj\Debug\WSGR_expcalc.vbproj.GenerateResource.Cache
+H:\Documents\GitHub\WSGR_expcalc\bin\Debug\经验计算.exe.config
+H:\Documents\GitHub\WSGR_expcalc\bin\Debug\经验计算.exe
+H:\Documents\GitHub\WSGR_expcalc\bin\Debug\经验计算.pdb
+H:\Documents\GitHub\WSGR_expcalc\bin\Debug\经验计算.xml
+H:\Documents\GitHub\WSGR_expcalc\obj\Debug\WSGR_expcalc.vbprojResolveAssemblyReference.cache
+H:\Documents\GitHub\WSGR_expcalc\obj\Debug\MainWindow.g.vb
+H:\Documents\GitHub\WSGR_expcalc\obj\Debug\Application.g.vb
+H:\Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算_MarkupCompile.cache
+H:\Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算_MarkupCompile.lref
+H:\Documents\GitHub\WSGR_expcalc\obj\Debug\MainWindow.baml
+H:\Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算.g.resources
+H:\Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算.Resources.resources
+H:\Documents\GitHub\WSGR_expcalc\obj\Debug\WSGR_expcalc.vbproj.GenerateResource.Cache
+H:\Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算.exe
+H:\Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算.xml
+H:\Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算.pdb
