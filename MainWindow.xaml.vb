@@ -307,6 +307,7 @@ Input1:
                     If onceexp = 0 Then MsgBox("昆昆才不会被骗去1-5吃土呢！", vbInformation) : GoTo Input1
             End Select
             Dim showtext4 As String
+            showtext4 = ""
             Dim winrate As Integer
             winrate = comboBox1.SelectedIndex
             Select Case winrate
@@ -784,6 +785,7 @@ Input3:
                     If onceexp = 0 Then MsgBox("这样的条件下是没有提督经验的哦(⊙o⊙)", vbInformation) : GoTo Input3
             End Select
             Dim showtext4 As String
+            showtext4 = ""
             Dim winrate As Integer
             winrate = comboBox1.SelectedIndex
             Select Case winrate
