@@ -6,13 +6,14 @@
         xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore"
         xmlns:local="clr-namespace:经验计算"
         mc:Ignorable="d"
-        Title="经验计算器 ver 1.9" Height="600" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="20180221040238918_easyicon_net_96.ico">
-    <Grid Margin="0,0,-175,-118">
+        Title="经验计算器 ver 2.0" Height="622.933" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="20180221040238918_easyicon_net_96.ico">
+    <Grid Margin="0,0,-175.4,-143.6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <GroupBox x:Name="groupBox4" Header="主要计算条件" HorizontalAlignment="Left" Height="84" Margin="286,23,0,0" VerticalAlignment="Top" Width="510"/>
-        <GroupBox x:Name="groupBox3" Header="额外计算条件" Height="365" Margin="28,34,0,0" Width="258" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <GroupBox x:Name="groupBox2" Header="自带BUFF区" HorizontalAlignment="Left" Height="247" Margin="41,286,0,0" VerticalAlignment="Top" Width="171"/>
+        <GroupBox x:Name="groupBox4" Header="主要计算条件" HorizontalAlignment="Left" Height="84" Margin="286,23,0,0" VerticalAlignment="Top" Width="503"/>
+        <GroupBox x:Name="groupBox3" Header="额外计算条件" Height="523" Margin="28,34,0,0" Width="258" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <GroupBox x:Name="groupBox1" Header="技能BUFF区" HorizontalAlignment="Left" Margin="41,113,0,0" VerticalAlignment="Top" Height="168" Width="194"/>
         <TextBox x:Name="textBoxfrom" HorizontalAlignment="Left" Height="23" Margin="314,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" Text="1" InputMethod.IsInputMethodEnabled="False"/>
         <TextBox x:Name="textBoxto" HorizontalAlignment="Left" Height="23" Margin="402,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" Text="110" InputMethod.IsInputMethodEnabled="False"/>
@@ -82,13 +83,15 @@
             <ListBoxItem Content="C败"/>
             <ListBoxItem Content="D败"/>
         </ComboBox>
-        <GroupBox x:Name="groupBox" Header="脸区" HorizontalAlignment="Left" Height="57" Margin="41,50,0,0" VerticalAlignment="Top" Width="240">
+        <RadioButton x:Name="weapon1" Content="1%经验&#xA;奇迹球鞋 蓝色战袍&#xA;蜘蛛手套 红黑球袜" HorizontalAlignment="Left" Margin="69,383,0,0" VerticalAlignment="Top" Height="43.968" IsEnabled="False" GroupName="equ"/>
+        <RadioButton x:Name="weapon2" Content="5%经验&#xA;通气管（潜艇）&#xA;F4U（冰淇淋）&#xA;" HorizontalAlignment="Left" Margin="69,431.968,0,0" VerticalAlignment="Top"  Width="143" Height="47.298" IsEnabled="False" GroupName="equ"/>
+        <RadioButton x:Name="weapon3" Content="7%经验&#xA;БР-482炮弹&#xA;特制穿甲弹" HorizontalAlignment="Left" Margin="69,484.266,0,0" VerticalAlignment="Top" Height="49.134" Width="143" IsEnabled="False" GroupName="equ"/>
+        <GroupBox x:Name="groupBox" Header="脸区" HorizontalAlignment="Left" Height="63" Margin="41,50,0,0" VerticalAlignment="Top" Width="240">
             <Label x:Name="label1" Content="%" HorizontalAlignment="Left" Height="100" Margin="192.6,16.237,0,-82.074" VerticalAlignment="Top"/>
         </GroupBox>
-        <GroupBox x:Name="groupBox2" Header="自带BUFF区" HorizontalAlignment="Left" Height="109" Margin="41,286,0,0" VerticalAlignment="Top" Width="171"/>
         <Button x:Name="button1" Content="关于软件" HorizontalAlignment="Left" Height="55" Margin="523,277,0,0" VerticalAlignment="Top" Width="123" FontSize="18"/>
         <Button x:Name="button2" Content="离港" HorizontalAlignment="Left" Height="48" Margin="553,351,0,0" VerticalAlignment="Top" Width="90" FontSize="18" FontStyle="{DynamicResource {x:Static SystemFonts.IconFontStyleKey}}" FontWeight="Bold"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="163" Margin="0,404,0,0" VerticalAlignment="Top" Width="352" Source="pic1.jpg" Opacity="0.33">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="163" Margin="379,404,0,0" VerticalAlignment="Top" Width="352" Source="pic1.jpg" Opacity="0.33">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="pic1.jpg"/>
             </Image.OpacityMask>
@@ -97,5 +100,6 @@
         <RadioButton x:Name="type1" Content="舰娘" HorizontalAlignment="Left" Margin="296,47,0,0" VerticalAlignment="Top" IsChecked="True"/>
         <RadioButton x:Name="type2" Content="提督" HorizontalAlignment="Left" Margin="344,47,0,0" VerticalAlignment="Top"/>
         <Button x:Name="button3" Content="软件更新" HorizontalAlignment="Left" Height="55" Margin="371,277,0,0" VerticalAlignment="Top" Width="114" FontSize="18"/>
+        <CheckBox x:Name="weapon" Content="经验装备（不叠加）" HorizontalAlignment="Left" Margin="50,365,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

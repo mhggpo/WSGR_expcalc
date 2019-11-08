@@ -2,7 +2,21 @@
     Dim expfrom, expto, needexp, onceexp, onceexp1, onceexp2, times As Long
     Dim jianniangexp(111) As Long
     Dim tiduexp(252) As Long
-    Dim flagship, train, mvp, shengjian, bread, laibixi, ke, baiyan, baiyane, baiyannoe, lanli, lanliu, lanlinou, xiangqu As Boolean
+    Dim flagship, train, mvp, shengjian, bread, laibixi, ke, baiyan, baiyane, baiyannoe, lanli, lanliu, lanlinou, xiangqu, equip1, equip2, equip3 As Boolean
+
+    Private Sub weapons_Checked(sender As Object, e As RoutedEventArgs) Handles weapon.Checked
+        weapon1.IsEnabled = True
+        weapon2.IsEnabled = True
+        weapon3.IsEnabled = True
+    End Sub
+    Private Sub weapons_Unchecked(sender As Object, e As RoutedEventArgs) Handles weapon.Unchecked
+        weapon1.IsEnabled = False
+        weapon1.IsChecked = False
+        weapon2.IsEnabled = False
+        weapon2.IsChecked = False
+        weapon3.IsEnabled = False
+        weapon3.IsChecked = False
+    End Sub
 
     Private Sub button3_Click(sender As Object, e As RoutedEventArgs) Handles button3.Click
         MsgBox("接下来会打开本软件的Github页面，请按页面提示寻找软件最新版本哦！ 0v0", vbInformation, "昆昆提示")
@@ -344,6 +358,9 @@ Input1:
             baiyane = radioButton5.IsChecked And radioButton5.IsEnabled
             baiyannoe = radioButton6.IsChecked And radioButton6.IsEnabled
             xiangqu = xiangqu1.IsChecked And xiangqu1.IsEnabled
+            equip1 = weapon1.IsChecked And weapon.IsEnabled
+            equip2 = weapon2.IsChecked And weapon.IsEnabled
+            equip3 = weapon3.IsChecked And weapon.IsEnabled
             Dim tempforke As Long
             tempforke = onceexp
             If (flagship And Not mvp) Then
@@ -394,6 +411,13 @@ Input1:
             End If
             If (ke) Then
                 onceexp = onceexp + tempforke
+            End If
+            If (equip1) Then
+                onceexp = onceexp * 1.01
+            ElseIf (equip2) Then
+                onceexp = onceexp * 1.05
+            ElseIf (equip3) Then
+                onceexp = onceexp * 1.07
             End If
             times = needexp / onceexp
             MsgBox("充满智慧的昆西掐指一算：" & "舰娘由等级" & textBoxfrom.Text & "升级至" & textBoxto.Text & "，共需经验值" & needexp & vbCrLf & "刷" & stage & "关卡的单个节点，在保持" & showtext1 & showtext2 & showtext3 & "战后" & showtext4 & "评价前提下," & vbCrLf & "一次经验" & onceexp & "，需要次数：" & times, vbInformation, "昆昆提示")
