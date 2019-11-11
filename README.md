@@ -36,7 +36,7 @@
  经验表来源于舰Rwiki,感谢dalao
  计算原理来自舰少资料库,感谢dalao
 ### 下载
-- 直接到"\bin\Release\"文件夹内寻找最新编译版本(推荐)
+- 直接到"\bin\Release\"文件夹内寻找最新编译版本(推荐)**萌新在2019年光棍节学会了放Release……**
 - [百度云](https://pan.baidu.com/s/1_rFDiBhbmew01EnYVltsfQ)
  Enjoy it:) |v0
 
