@@ -75,117 +75,23 @@
     End Sub
     Private Sub button_Click(sender As Object, e As RoutedEventArgs) Handles button.Click
         If type1.IsChecked = True Then
-            jianniangexp(0) = 0
-            jianniangexp(1) = 0
-            jianniangexp(2) = 100
-            jianniangexp(3) = 300
-            jianniangexp(4) = 600
-            jianniangexp(5) = 1000
-            jianniangexp(6) = 1500
-            jianniangexp(7) = 2100
-            jianniangexp(8) = 2800
-            jianniangexp(9) = 3600
-            jianniangexp(10) = 4500
-            jianniangexp(11) = 5500
-            jianniangexp(12) = 6600
-            jianniangexp(13) = 7800
-            jianniangexp(14) = 9100
-            jianniangexp(15) = 10500
-            jianniangexp(16) = 12000
-            jianniangexp(17) = 13600
-            jianniangexp(18) = 15300
-            jianniangexp(19) = 17100
-            jianniangexp(20) = 19000
-            jianniangexp(21) = 21000
-            jianniangexp(22) = 23100
-            jianniangexp(23) = 25300
-            jianniangexp(24) = 27600
-            jianniangexp(25) = 30000
-            jianniangexp(26) = 32500
-            jianniangexp(27) = 35100
-            jianniangexp(28) = 37800
-            jianniangexp(29) = 40600
-            jianniangexp(30) = 43500
-            jianniangexp(31) = 46500
-            jianniangexp(32) = 49600
-            jianniangexp(33) = 52800
-            jianniangexp(34) = 56100
-            jianniangexp(35) = 59500
-            jianniangexp(36) = 63000
-            jianniangexp(37) = 66600
-            jianniangexp(38) = 70300
-            jianniangexp(39) = 74100
-            jianniangexp(40) = 78000
-            jianniangexp(41) = 82000
-            jianniangexp(42) = 86100
-            jianniangexp(43) = 90300
-            jianniangexp(44) = 94600
-            jianniangexp(45) = 99000
-            jianniangexp(46) = 103500
-            jianniangexp(47) = 108100
-            jianniangexp(48) = 112800
-            jianniangexp(49) = 117600
-            jianniangexp(50) = 122500
-            jianniangexp(51) = 127500
-            jianniangexp(52) = 132700
-            jianniangexp(53) = 138100
-            jianniangexp(54) = 143700
-            jianniangexp(55) = 149500
-            jianniangexp(56) = 155500
-            jianniangexp(57) = 161700
-            jianniangexp(58) = 168100
-            jianniangexp(59) = 174700
-            jianniangexp(60) = 181500
-            jianniangexp(61) = 188500
-            jianniangexp(62) = 195800
-            jianniangexp(63) = 203400
-            jianniangexp(64) = 211300
-            jianniangexp(65) = 219600
-            jianniangexp(66) = 228300
-            jianniangexp(67) = 237400
-            jianniangexp(68) = 247000
-            jianniangexp(69) = 257100
-            jianniangexp(70) = 267800
-            jianniangexp(71) = 279100
-            jianniangexp(72) = 291100
-            jianniangexp(73) = 303800
-            jianniangexp(74) = 317300
-            jianniangexp(75) = 331700
-            jianniangexp(76) = 347000
-            jianniangexp(77) = 363300
-            jianniangexp(78) = 380700
-            jianniangexp(79) = 399300
-            jianniangexp(80) = 419100
-            jianniangexp(81) = 440200
-            jianniangexp(82) = 462700
-            jianniangexp(83) = 486700
-            jianniangexp(84) = 512300
-            jianniangexp(85) = 539600
-            jianniangexp(86) = 568700
-            jianniangexp(87) = 599700
-            jianniangexp(88) = 632700
-            jianniangexp(89) = 667900
-            jianniangexp(90) = 705400
-            jianniangexp(91) = 745300
-            jianniangexp(92) = 787700
-            jianniangexp(93) = 832800
-            jianniangexp(94) = 880700
-            jianniangexp(95) = 931600
-            jianniangexp(96) = 985600
-            jianniangexp(97) = 1042800
-            jianniangexp(98) = 1103400
-            jianniangexp(99) = 1167600
-            jianniangexp(100) = 1235500
-            jianniangexp(101) = 1307300
-            jianniangexp(102) = 1379100
-            jianniangexp(103) = 1450900
-            jianniangexp(104) = 1522700
-            jianniangexp(105) = 1594500
-            jianniangexp(106) = 1666300
-            jianniangexp(107) = 1738100
-            jianniangexp(108) = 1809900
-            jianniangexp(109) = 1881700
-            jianniangexp(110) = 1953500
+            jianniangexp = {0, 0, 100, 300, 600, 1000, 1500, 2100, 2800, 3600, 4500,
+5500, 6600, 7800, 9100, 10500, 12000, 13600, 15300,
+17100, 19000, 21000, 23100, 25300, 27600, 30000,
+32500, 35100, 37800, 40600, 43500, 46500, 49600,
+52800, 56100, 59500, 63000, 66600, 70300, 74100,
+78000, 82000, 86100, 90300, 94600, 99000, 103500,
+108100, 112800, 117600, 122500, 127500, 132700,
+138100, 143700, 149500, 155500, 161700, 168100,
+174700, 181500, 188500, 195800, 203400, 211300,
+219600, 228300, 237400, 247000, 257100, 267800,
+279100, 291100, 303800, 317300, 331700, 347000,
+363300, 380700, 399300, 419100, 440200, 462700,
+486700, 512300, 539600, 568700, 599700, 632700,
+667900, 705400, 745300, 787700, 832800, 880700,
+931600, 985600, 1042800, 1103400, 1167600, 1235500,
+1307300, 1379100, 1450900, 1522700, 1594500, 1666300,
+1738100, 1809900, 1881700, 1953500}
             If Val(textBoxfrom.Text) >= 1 And Val(textBoxfrom.Text) <= Val(textBoxto.Text) Then
             Else
                 MsgBox(“输入有误，请重新输入！”, vbInformation)
@@ -422,258 +328,39 @@ Input1:
             times = needexp / onceexp
             MsgBox("充满智慧的昆西掐指一算：" & "舰娘由等级" & textBoxfrom.Text & "升级至" & textBoxto.Text & "，共需经验值" & needexp & vbCrLf & "刷" & stage & "关卡的单个节点，在保持" & showtext1 & showtext2 & showtext3 & "战后" & showtext4 & "评价前提下," & vbCrLf & "一次经验" & onceexp & "，需要次数：" & times, vbInformation, "昆昆提示")
         Else
-            tiduexp(0) = 0
-            tiduexp(1) = 0
-            tiduexp(2) = 50
-            tiduexp(3) = 110
-            tiduexp(4) = 180
-            tiduexp(5) = 260
-            tiduexp(6) = 360
-            tiduexp(7) = 480
-            tiduexp(8) = 620
-            tiduexp(9) = 790
-            tiduexp(10) = 990
-            tiduexp(11) = 1220
-            tiduexp(12) = 1490
-            tiduexp(13) = 1800
-            tiduexp(14) = 2150
-            tiduexp(15) = 2550
-            tiduexp(16) = 3000
-            tiduexp(17) = 3500
-            tiduexp(18) = 4060
-            tiduexp(19) = 4680
-            tiduexp(20) = 5360
-            tiduexp(21) = 6110
-            tiduexp(22) = 6930
-            tiduexp(23) = 7820
-            tiduexp(24) = 8790
-            tiduexp(25) = 9840
-            tiduexp(26) = 10970
-            tiduexp(27) = 12190
-            tiduexp(28) = 13500
-            tiduexp(29) = 14900
-            tiduexp(30) = 16400
-            tiduexp(31) = 18000
-            tiduexp(32) = 19700
-            tiduexp(33) = 21510
-            tiduexp(34) = 23430
-            tiduexp(35) = 25460
-            tiduexp(36) = 27610
-            tiduexp(37) = 29880
-            tiduexp(38) = 32270
-            tiduexp(39) = 34790
-            tiduexp(40) = 37440
-            tiduexp(41) = 40220
-            tiduexp(42) = 43140
-            tiduexp(43) = 46200
-            tiduexp(44) = 49400
-            tiduexp(45) = 52750
-            tiduexp(46) = 56250
-            tiduexp(47) = 59900
-            tiduexp(48) = 63710
-            tiduexp(49) = 67680
-            tiduexp(50) = 71810
-            tiduexp(51) = 76110
-            tiduexp(52) = 80670
-            tiduexp(53) = 85490
-            tiduexp(54) = 90580
-            tiduexp(55) = 95940
-            tiduexp(56) = 101580
-            tiduexp(57) = 107500
-            tiduexp(58) = 113710
-            tiduexp(59) = 120210
-            tiduexp(60) = 127010
-            tiduexp(61) = 134110
-            tiduexp(62) = 141520
-            tiduexp(63) = 149240
-            tiduexp(64) = 157280
-            tiduexp(65) = 165640
-            tiduexp(66) = 174330
-            tiduexp(67) = 183350
-            tiduexp(68) = 192710
-            tiduexp(69) = 202410
-            tiduexp(70) = 212460
-            tiduexp(71) = 222860
-            tiduexp(72) = 233980
-            tiduexp(73) = 245830
-            tiduexp(74) = 258420
-            tiduexp(75) = 271760
-            tiduexp(76) = 285860
-            tiduexp(77) = 300730
-            tiduexp(78) = 316380
-            tiduexp(79) = 332820
-            tiduexp(80) = 350060
-            tiduexp(81) = 368110
-            tiduexp(82) = 386980
-            tiduexp(83) = 406680
-            tiduexp(84) = 427220
-            tiduexp(85) = 448610
-            tiduexp(86) = 470860
-            tiduexp(87) = 493980
-            tiduexp(88) = 517980
-            tiduexp(89) = 542870
-            tiduexp(90) = 568660
-            tiduexp(91) = 595360
-            tiduexp(92) = 623900
-            tiduexp(93) = 654300
-            tiduexp(94) = 686580
-            tiduexp(95) = 720760
-            tiduexp(96) = 756860
-            tiduexp(97) = 794900
-            tiduexp(98) = 834900
-            tiduexp(99) = 876880
-            tiduexp(100) = 920860
-            tiduexp(101) = 966860
-            tiduexp(102) = 1016940
-            tiduexp(103) = 1071140
-            tiduexp(104) = 1129500
-            tiduexp(105) = 1192060
-            tiduexp(106) = 1258860
-            tiduexp(107) = 1329940
-            tiduexp(108) = 1405340
-            tiduexp(109) = 1485100
-            tiduexp(110) = 1569260
-            tiduexp(111) = 1657860
-            tiduexp(112) = 1750940
-            tiduexp(113) = 1848540
-            tiduexp(114) = 1950700
-            tiduexp(115) = 2057460
-            tiduexp(116) = 2168860
-            tiduexp(117) = 2284940
-            tiduexp(118) = 2405740
-            tiduexp(119) = 2531300
-            tiduexp(120) = 2661660
-            tiduexp(121) = 2796860
-            tiduexp(122) = 2936940
-            tiduexp(123) = 3081940
-            tiduexp(124) = 3231900
-            tiduexp(125) = 3386860
-            tiduexp(126) = 3546860
-            tiduexp(127) = 3711940
-            tiduexp(128) = 3882140
-            tiduexp(129) = 4057500
-            tiduexp(130) = 4238060
-            tiduexp(131) = 4423860
-            tiduexp(132) = 4614940
-            tiduexp(133) = 4811340
-            tiduexp(134) = 5013100
-            tiduexp(135) = 5220260
-            tiduexp(136) = 5432860
-            tiduexp(137) = 5650940
-            tiduexp(138) = 5874540
-            tiduexp(139) = 6103700
-            tiduexp(140) = 6338460
-            tiduexp(141) = 6578860
-            tiduexp(142) = 6824940
-            tiduexp(143) = 7076740
-            tiduexp(144) = 7334300
-            tiduexp(145) = 7597660
-            tiduexp(146) = 7866860
-            tiduexp(147) = 8141940
-            tiduexp(148) = 8422940
-            tiduexp(149) = 8709900
-            tiduexp(150) = 9002860
-            tiduexp(151) = 9301860
-            tiduexp(152) = 9606940
-            tiduexp(153) = 9918140
-            tiduexp(154) = 10235500
-            tiduexp(155) = 10559060
-            tiduexp(156) = 10888860
-            tiduexp(157) = 11224940
-            tiduexp(158) = 11567340
-            tiduexp(159) = 11916100
-            tiduexp(160) = 12271260
-            tiduexp(161) = 12632860
-            tiduexp(162) = 13000940
-            tiduexp(163) = 13375540
-            tiduexp(164) = 13756700
-            tiduexp(165) = 14144460
-            tiduexp(166) = 14538860
-            tiduexp(167) = 14939940
-            tiduexp(168) = 15347740
-            tiduexp(169) = 15762300
-            tiduexp(170) = 16183660
-            tiduexp(171) = 16611860
-            tiduexp(172) = 17046940
-            tiduexp(173) = 17488940
-            tiduexp(174) = 17937900
-            tiduexp(175) = 18393860
-            tiduexp(176) = 18856860
-            tiduexp(177) = 19326940
-            tiduexp(178) = 19804140
-            tiduexp(179) = 20288500
-            tiduexp(180) = 20780060
-            tiduexp(181) = 21278860
-            tiduexp(182) = 21784940
-            tiduexp(183) = 22298340
-            tiduexp(184) = 22819100
-            tiduexp(185) = 23347260
-            tiduexp(186) = 23882860
-            tiduexp(187) = 24425940
-            tiduexp(188) = 24976540
-            tiduexp(189) = 25534700
-            tiduexp(190) = 26100460
-            tiduexp(191) = 26673860
-            tiduexp(192) = 27254940
-            tiduexp(193) = 27843740
-            tiduexp(194) = 28440300
-            tiduexp(195) = 29044660
-            tiduexp(196) = 29656860
-            tiduexp(197) = 30276940
-            tiduexp(198) = 30904940
-            tiduexp(199) = 31540900
-            tiduexp(200) = 32184860
-            tiduexp(201) = 32836860
-            tiduexp(202) = 33496940
-            tiduexp(203) = 34165140
-            tiduexp(204) = 34841500
-            tiduexp(205) = 35526060
-            tiduexp(206) = 36218860
-            tiduexp(207) = 36919940
-            tiduexp(208) = 37629340
-            tiduexp(209) = 38347100
-            tiduexp(210) = 39073260
-            tiduexp(211) = 39807860
-            tiduexp(212) = 40550940
-            tiduexp(213) = 41302540
-            tiduexp(214) = 42062700
-            tiduexp(215) = 42831460
-            tiduexp(216) = 43608860
-            tiduexp(217) = 44394940
-            tiduexp(218) = 45189740
-            tiduexp(219) = 45993300
-            tiduexp(220) = 46805660
-            tiduexp(221) = 47626860
-            tiduexp(222) = 48456940
-            tiduexp(223) = 49295940
-            tiduexp(224) = 50143900
-            tiduexp(225) = 51000860
-            tiduexp(226) = 51866860
-            tiduexp(227) = 52741940
-            tiduexp(228) = 53626140
-            tiduexp(229) = 54519500
-            tiduexp(230) = 55422060
-            tiduexp(231) = 56333860
-            tiduexp(232) = 57254940
-            tiduexp(233) = 58185340
-            tiduexp(234) = 59125100
-            tiduexp(235) = 60074260
-            tiduexp(236) = 61032860
-            tiduexp(237) = 62000940
-            tiduexp(238) = 62978540
-            tiduexp(239) = 63965700
-            tiduexp(240) = 64962460
-            tiduexp(241) = 65968860
-            tiduexp(242) = 66984940
-            tiduexp(243) = 68010740
-            tiduexp(244) = 69046300
-            tiduexp(245) = 70091660
-            tiduexp(246) = 71146860
-            tiduexp(247) = 72211940
-            tiduexp(248) = 73286940
-            tiduexp(249) = 74371900
-            tiduexp(250) = 75466860
-            tiduexp(251) = 76571860
+            tiduexp = {0, 0, 50, 110, 180, 260, 360, 480, 620, 790, 990, 1220, 1490, 1800, 2150,
+2550, 3000, 3500, 4060, 4680, 5360, 6110, 6930, 7820, 8790, 9840,
+10970, 12190, 13500, 14900, 16400, 18000, 19700, 21510, 23430,
+25460, 27610, 29880, 32270, 34790, 37440, 40220, 43140, 46200,
+49400, 52750, 56250, 59900, 63710, 67680, 71810, 76110, 80670,
+85490, 90580, 95940, 101580, 107500, 113710, 120210, 127010,
+134110, 141520, 149240, 157280, 165640, 174330, 183350, 192710,
+202410, 212460, 222860, 233980, 245830, 258420, 271760, 285860,
+300730, 316380, 332820, 350060, 368110, 386980, 406680, 427220,
+448610, 470860, 493980, 517980, 542870, 568660, 595360, 623900,
+654300, 686580, 720760, 756860, 794900, 834900, 876880, 920860,
+966860, 1016940, 1071140, 1129500, 1192060, 1258860, 1329940,
+1405340, 1485100, 1569260, 1657860, 1750940, 1848540, 1950700,
+2057460, 2168860, 2284940, 2405740, 2531300, 2661660, 2796860,
+2936940, 3081940, 3231900, 3386860, 3546860, 3711940, 3882140,
+4057500, 4238060, 4423860, 4614940, 4811340, 5013100, 5220260,
+5432860, 5650940, 5874540, 6103700, 6338460, 6578860, 6824940,
+7076740, 7334300, 7597660, 7866860, 8141940, 8422940, 8709900,
+9002860, 9301860, 9606940, 9918140, 10235500, 10559060, 10888860,
+11224940, 11567340, 11916100, 12271260, 12632860, 13000940, 13375540,
+13756700, 14144460, 14538860, 14939940, 15347740, 15762300, 16183660,
+16611860, 17046940, 17488940, 17937900, 18393860, 18856860, 19326940,
+19804140, 20288500, 20780060, 21278860, 21784940, 22298340, 22819100,
+23347260, 23882860, 24425940, 24976540, 25534700, 26100460, 26673860,
+27254940, 27843740, 28440300, 29044660, 29656860, 30276940, 30904940,
+31540900, 32184860, 32836860, 33496940, 34165140, 34841500, 35526060,
+36218860, 36919940, 37629340, 38347100, 39073260, 39807860, 40550940,
+41302540, 42062700, 42831460, 43608860, 44394940, 45189740, 45993300,
+46805660, 47626860, 48456940, 49295940, 50143900, 51000860, 51866860,
+52741940, 53626140, 54519500, 55422060, 56333860, 57254940, 58185340,
+59125100, 60074260, 61032860, 62000940, 62978540, 63965700, 64962460,
+65968860, 66984940, 68010740, 69046300, 70091660, 71146860, 72211940,
+73286940, 74371900, 75466860, 76571860}
             If Val(textBoxfrom.Text) >= 1 And Val(textBoxfrom.Text) <= Val(textBoxto.Text) Then
             Else
                 MsgBox(“输入有误，请重新输入！”, vbInformation)
