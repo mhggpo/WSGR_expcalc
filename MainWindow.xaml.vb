@@ -217,6 +217,9 @@
                     stage = "8-1"
                     onceexp = 600
                 Case 34
+                    stage = "8-2"
+                    onceexp = 600
+                Case 35
                     stage = "自定义"
                     Dim temp1 As String
 Input1:
@@ -486,6 +489,9 @@ Input1:
                     stage = "8-1"
                     onceexp = 190
                 Case 34
+                    stage = "8-2"
+                    onceexp = 190
+                Case 35
                     stage = "自定义"
                     Dim temp1 As String
 Input3:
