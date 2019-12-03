@@ -2,8 +2,14 @@
     Dim expfrom, expto, needexp, onceexp, onceexp1, onceexp2, times As Long
     Dim jianniangexp(111) As Long
     Dim tiduexp(252) As Long
-    Dim flagship, train, mvp, shengjian, bread, laibixi, ke, baiyan, baiyane, baiyannoe, lanli, lanliu, lanlinou, xiangqu, equip1, equip2, equip3 As Boolean
+    Dim flagship, train, mvp, shengjian, bread, laibixi, ke, baiyan, baiyane, baiyannoe, lanli, lanliu, lanlinou, xiangqu, equip1, equip2, equip3, teacher1 As Boolean
 
+    Private Sub teacher_Checked(sender As Object, e As RoutedEventArgs) Handles teacher.Checked
+        teacher1 = True
+    End Sub
+    Private Sub teacher_unChecked(sender As Object, e As RoutedEventArgs) Handles teacher.Unchecked
+        teacher1 = False
+    End Sub
     Private Sub weapons_Checked(sender As Object, e As RoutedEventArgs) Handles weapon.Checked
         weapon1.IsEnabled = True
         weapon2.IsEnabled = True
@@ -253,6 +259,8 @@ Input1:
                     showtext4 = "D"
                     onceexp = onceexp * 0.5
             End Select
+            Dim teachers As Integer
+            teachers = combobox2.SelectedIndex
             expfrom = jianniangexp(CInt(textBoxfrom.Text))
             expto = jianniangexp(CInt(textBoxto.Text))
             needexp = expto - expfrom
@@ -328,10 +336,27 @@ Input1:
             ElseIf (equip3) Then
                 onceexp = onceexp * 1.07
             End If
-            times = needexp / onceexp
+            Dim tempfortea As Long
+            tempfortea = 0
+            If (teacher1) Then
+                tempfortea = needexp - (onceexp * 1.5 * teachers)
+            End If
+            If (tempfortea > 0 And teacher1) Then
+                times = (tempfortea / onceexp) + teachers
+            ElseIf (tempfortea <= 0 And teacher1) Then
+                While (tempfortea <= 0)
+                    MsgBox("昆西稍稍思考，发现当前条件下经验溢出，将自动提升一个目标等级计算！", vbInformation, "昆昆提示")
+                    textBoxto.Text = textBoxto.Text + 1
+                    expto = jianniangexp(CInt(textBoxto.Text))
+                    needexp = expto - expfrom
+                    tempfortea = needexp - (onceexp * 1.5 * teachers)
+                End While
+                times = (tempfortea / onceexp) + teachers
+            Else times = (needexp / onceexp)
+            End If
             MsgBox("充满智慧的昆西掐指一算：" & "舰娘由等级" & textBoxfrom.Text & "升级至" & textBoxto.Text & "，共需经验值" & needexp & vbCrLf & "刷" & stage & "关卡的单个节点，在保持" & showtext1 & showtext2 & showtext3 & "战后" & showtext4 & "评价前提下," & vbCrLf & "一次经验" & onceexp & "，需要次数：" & times, vbInformation, "昆昆提示")
-        Else
-            tiduexp = {0, 0, 50, 110, 180, 260, 360, 480, 620, 790, 990, 1220, 1490, 1800, 2150,
+            Else
+                tiduexp = {0, 0, 50, 110, 180, 260, 360, 480, 620, 790, 990, 1220, 1490, 1800, 2150,
 2550, 3000, 3500, 4060, 4680, 5360, 6110, 6930, 7820, 8790, 9840,
 10970, 12190, 13500, 14900, 16400, 18000, 19700, 21510, 23430,
 25460, 27610, 29880, 32270, 34790, 37440, 40220, 43140, 46200,
