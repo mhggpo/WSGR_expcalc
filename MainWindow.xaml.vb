@@ -347,6 +347,10 @@ Input1:
                 While (tempfortea <= 0)
                     MsgBox("昆西稍稍思考，发现当前条件下经验溢出，将自动提升一个目标等级计算！", vbInformation, "昆昆提示")
                     textBoxto.Text = textBoxto.Text + 1
+                    If (textBoxto.Text > 90) Then
+                        MsgBox("目标等级大于上限！", vbCritical, "昆昆提示")
+                        Exit Sub
+                    End If
                     expto = jianniangexp(CInt(textBoxto.Text))
                     needexp = expto - expfrom
                     tempfortea = needexp - (onceexp * 1.5 * teachers)

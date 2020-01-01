@@ -98,7 +98,6 @@ C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\bin\Debug\经验计算.exe.config
 C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\bin\Debug\经验计算.exe
 C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\bin\Debug\经验计算.pdb
 C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\bin\Debug\经验计算.xml
-C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\obj\Debug\WSGR_expcalc.vbprojResolveAssemblyReference.cache
 C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\obj\Debug\MainWindow.g.vb
 C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\obj\Debug\Application.g.vb
 C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算_MarkupCompile.cache
@@ -110,3 +109,5 @@ C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\obj\Debug\WSGR_expcalc.vbproj.Gener
 C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算.exe
 C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算.xml
 C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\obj\Debug\经验计算.pdb
+C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\obj\Debug\WSGR_expcalc.vbprojAssemblyReference.cache
+C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\obj\Debug\WSGR_expcalc.vbproj.CoreCompileInputs.cache
