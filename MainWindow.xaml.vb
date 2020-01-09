@@ -329,6 +329,9 @@ Input1:
             If (ke) Then
                 onceexp = onceexp + tempforke
             End If
+            If (gewasi.IsChecked) Then
+                onceexp *= 2
+            End If
             If (equip1) Then
                 onceexp = onceexp * 1.01
             ElseIf (equip2) Then
@@ -339,7 +342,14 @@ Input1:
             Dim tempfortea As Long
             tempfortea = 0
             If (teacher1) Then
-                tempfortea = needexp - (onceexp * 1.5 * teachers)
+                Select Case teacherwho.SelectedIndex
+                    Case 0
+                        tempfortea = needexp - (onceexp * 1.5 * teachers)
+                    Case 1
+                        tempfortea = needexp - (onceexp * 1.75 * teachers)
+                    Case 2
+                        tempfortea = needexp - (onceexp * 2 * teachers)
+                End Select
             End If
             If (tempfortea > 0 And teacher1) Then
                 times = (tempfortea / onceexp) + teachers
@@ -347,6 +357,10 @@ Input1:
                 While (tempfortea <= 0)
                     MsgBox("昆西稍稍思考，发现当前条件下经验溢出，将自动提升一个目标等级计算！", vbInformation, "昆昆提示")
                     textBoxto.Text = textBoxto.Text + 1
+                    If (textBoxto.Text > 90) Then
+                        MsgBox("目标等级大于上限！", vbCritical, "昆昆提示")
+                        Exit Sub
+                    End If
                     expto = jianniangexp(CInt(textBoxto.Text))
                     needexp = expto - expfrom
                     tempfortea = needexp - (onceexp * 1.5 * teachers)

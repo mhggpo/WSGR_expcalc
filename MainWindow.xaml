@@ -6,15 +6,13 @@
         xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore"
         xmlns:local="clr-namespace:经验计算"
         mc:Ignorable="d"
-        Title="经验计算器 ver 2.2" Height="622.933" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="20180221040238918_easyicon_net_96.ico">
+        Title="经验计算器 ver 2.3" Height="622.933" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="20180221040238918_easyicon_net_96.ico">
     <Grid Margin="0,0,-175.4,-143.6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <GroupBox x:Name="groupBox2" Header="自带BUFF区" HorizontalAlignment="Left" Height="262.2" Margin="41,286,0,0" VerticalAlignment="Top" Width="171"/>
-        <GroupBox x:Name="groupBox4" Header="主要计算条件" HorizontalAlignment="Left" Height="84" Margin="286,23,0,0" VerticalAlignment="Top" Width="503"/>
-        <GroupBox x:Name="groupBox3" Header="额外计算条件" Height="523" Margin="28,34,0,0" Width="258" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <ComboBox x:Name="combobox2" HorizontalAlignment="Left" Height="20.066" Margin="84.933,478.334,0,0" VerticalAlignment="Top" Width="50.133">
+        <GroupBox x:Name="groupBox3" Header="额外计算条件" Height="552" Margin="28,34,0,0" Width="258" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.512,0.501">
+            <ComboBox x:Name="combobox2" HorizontalAlignment="Left" Height="20.066" Margin="190,478.334,0,0" VerticalAlignment="Top" Width="50.133">
                 <ComboBoxItem Content="0次" IsSelected="True"/>
                 <ComboBoxItem Content="1次"/>
                 <ComboBoxItem Content="2次"/>
@@ -28,7 +26,11 @@
                 <ComboBoxItem Content="10次"/>
             </ComboBox>
         </GroupBox>
-        <GroupBox x:Name="groupBox1" Header="技能BUFF区" HorizontalAlignment="Left" Margin="41,113,0,0" VerticalAlignment="Top" Height="168" Width="194"/>
+        <GroupBox x:Name="groupBox2" Header="自带BUFF区" HorizontalAlignment="Left" Height="291.2" Margin="41,286,0,0" VerticalAlignment="Top" Width="240">
+            <CheckBox x:Name="gewasi" Content="格瓦斯（S国限定）" HorizontalAlignment="Left" Height="18" Margin="3,249,0,0" VerticalAlignment="Top"/>
+        </GroupBox>
+        <GroupBox x:Name="groupBox4" Header="主要计算条件" HorizontalAlignment="Left" Height="84" Margin="286,23,0,0" VerticalAlignment="Top" Width="503"/>
+        <GroupBox x:Name="groupBox1" Header="技能BUFF区" HorizontalAlignment="Left" Margin="41,113,0,0" VerticalAlignment="Top" Height="168" Width="240"/>
         <TextBox x:Name="textBoxfrom" HorizontalAlignment="Left" Height="23" Margin="314,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" Text="1" InputMethod.IsInputMethodEnabled="False"/>
         <TextBox x:Name="textBoxto" HorizontalAlignment="Left" Height="23" Margin="402,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" Text="110" InputMethod.IsInputMethodEnabled="False"/>
         <TextBox x:Name="mvpcalc" HorizontalAlignment="Left" Height="23" Margin="200,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" Text="100" InputMethod.IsInputMethodEnabled="False"/>
@@ -117,5 +119,10 @@
         <Button x:Name="button3" Content="软件更新" HorizontalAlignment="Left" Height="55" Margin="371,277,0,0" VerticalAlignment="Top" Width="114" FontSize="18"/>
         <CheckBox x:Name="weapon" Content="经验装备（不叠加）" HorizontalAlignment="Left" Margin="50,365,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="teacher" Content="教官指导" HorizontalAlignment="Left" Margin="50,533,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="teacherwho" HorizontalAlignment="Left" Margin="118,529,0,0" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.395,0.429"  SelectedIndex="0" FontSize="10">
+            <ListBoxItem Content="初级模拟(+50%)" IsSelected="True"/>
+            <ListBoxItem Content="教官指导(+75%)"/>
+            <ListBoxItem Content="艾拉督战(+100%)"/>
+        </ComboBox>
     </Grid>
 </Window>
