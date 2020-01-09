@@ -329,6 +329,9 @@ Input1:
             If (ke) Then
                 onceexp = onceexp + tempforke
             End If
+            If (gewasi.IsChecked) Then
+                onceexp *= 2
+            End If
             If (equip1) Then
                 onceexp = onceexp * 1.01
             ElseIf (equip2) Then
@@ -339,7 +342,14 @@ Input1:
             Dim tempfortea As Long
             tempfortea = 0
             If (teacher1) Then
-                tempfortea = needexp - (onceexp * 1.5 * teachers)
+                Select Case teacherwho.SelectedIndex
+                    Case 0
+                        tempfortea = needexp - (onceexp * 1.5 * teachers)
+                    Case 1
+                        tempfortea = needexp - (onceexp * 1.75 * teachers)
+                    Case 2
+                        tempfortea = needexp - (onceexp * 2 * teachers)
+                End Select
             End If
             If (tempfortea > 0 And teacher1) Then
                 times = (tempfortea / onceexp) + teachers
