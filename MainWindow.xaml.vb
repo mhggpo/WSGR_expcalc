@@ -3,7 +3,10 @@
     Dim jianniangexp(111) As Long
     Dim tiduexp(252) As Long
     Dim flagship, train, mvp, shengjian, bread, laibixi, ke, baiyan, baiyane, baiyannoe, lanli, lanliu, lanlinou, xiangqu, equip1, equip2, equip3, teacher1 As Boolean
-
+    Public Sub setupexp(ByVal str1 As String, ByVal num1 As Integer)
+        stage = str1
+        onceexp = num1
+    End Sub
     Private Sub teacher_Checked(sender As Object, e As RoutedEventArgs) Handles teacher.Checked
         teacher1 = True
     End Sub
@@ -98,6 +101,11 @@
 931600, 985600, 1042800, 1103400, 1167600, 1235500,
 1307300, 1379100, 1450900, 1522700, 1594500, 1666300,
 1738100, 1809900, 1881700, 1953500}
+            Dim levelExp(36) As Integer
+            levelExp = {30, 50, 80, 120, 0, 100, 120, 150, 200, 400, 420, 150, 180, 220, 300, 250, 300, 330,
+360, 350, 370, 400, 420, 450, 400, 410, 420, 500, 450, 480, 520, 560, 560, 600, 600, 600}
+            Dim levelText As ListBoxItem
+            levelText = CType(comboBox.SelectedItem, ListBoxItem)
             If Val(textBoxfrom.Text) >= 1 And Val(textBoxfrom.Text) <= Val(textBoxto.Text) Then
             Else
                 MsgBox(“输入有误，请重新输入！”, vbInformation)
@@ -115,260 +123,157 @@
                 MsgBox(“输入有误，请重新输入！”, vbInformation)
                 Exit Sub
             End If
-            Dim level2 As Integer
-            level2 = comboBox.SelectedIndex
-            Select Case level2
-                Case 0
-                    stage = "1-1"
-                    onceexp = 30
-                Case 1
-                    stage = "1-2"
-                    onceexp = 50
-                Case 2
-                    stage = "1-3"
-                    onceexp = 80
-                Case 3
-                    stage = "1-4"
-                    onceexp = 120
-                Case 4
-                    stage = "1-5"
-                    onceexp = 1
-                    MsgBox("兄弟你何苦为难自己呢，苦海无涯，回头是岸啊！", vbExclamation, “唉”)
-                    End
-                Case 5
-                    stage = "2-1"
-                    onceexp = 100
-                Case 6
-                    stage = "2-2"
-                    onceexp = 120
-                Case 7
-                    stage = "2-3"
-                    onceexp = 150
-                Case 8
-                    stage = "2-4"
-                    onceexp = 200
-                Case 9
-                    stage = "2-5"
-                    onceexp = 400
-                Case 10
-                    stage = "2-6"
-                    onceexp = 420
-                Case 11
-                    stage = "3-1"
-                    onceexp = 150
-                Case 12
-                    stage = "3-2"
-                    onceexp = 180
-                Case 13
-                    stage = "3-3"
-                    onceexp = 220
-                Case 14
-                    stage = "3-4"
-                    onceexp = 300
-                Case 15
-                    stage = "4-1"
-                    onceexp = 250
-                Case 16
-                    stage = "4-2"
-                    onceexp = 300
-                Case 17
-                    stage = "4-3"
-                    onceexp = 330
-                Case 18
-                    stage = "4-4"
-                    onceexp = 360
-                Case 19
-                    stage = "5-1"
-                    onceexp = 350
-                Case 20
-                    stage = "5-2"
-                    onceexp = 370
-                Case 21
-                    stage = "5-3"
-                    onceexp = 400
-                Case 22
-                    stage = "5-4"
-                    onceexp = 420
-                Case 23
-                    stage = "5-5"
-                    onceexp = 450
-                Case 24
-                    stage = "6-1"
-                    onceexp = 400
-                Case 25
-                    stage = "6-2"
-                    onceexp = 410
-                Case 26
-                    stage = "6-3"
-                    onceexp = 420
-                Case 27
-                    stage = "6-4"
-                    onceexp = 500
-                Case 28
-                    stage = "7-1"
-                    onceexp = 450
-                Case 29
-                    stage = "7-2"
-                    onceexp = 480
-                Case 30
-                    stage = "7-3"
-                    onceexp = 520
-                Case 31
-                    stage = "7-4"
-                    onceexp = 560
-                Case 32
-                    stage = "7-5"
-                    onceexp = 560
-                Case 33
-                    stage = "8-1"
-                    onceexp = 600
-                Case 34
-                    stage = "8-2"
-                    onceexp = 600
-                Case 35
-                    stage = "自定义"
-                    Dim temp1 As String
+            If comboBox.SelectedIndex = 36 Then
+                stage = "自定义"
+                Dim temp1 As String
 Input1:
-                    temp1 = InputBox("请输入关卡基础经验(即A胜经验)", "昆昆提示")
-                    If temp1 = "" Then MsgBox("哼，居然想用空白的条件来忽悠昆西╭(╯^╰)╮，不可原谅！", vbInformation) : GoTo Input1
-                    If temp1 = "0" Then MsgBox("昆昆才不会被骗去1-5吃土呢！", vbInformation) : GoTo Input1
-                    onceexp = Val(temp1)
-                    If onceexp = 0 Then MsgBox("昆昆才不会被骗去1-5吃土呢！", vbInformation) : GoTo Input1
-            End Select
+                temp1 = InputBox("请输入关卡基础经验(即A胜经验)", "昆昆提示")
+                If temp1 = "" Then MsgBox("哼，居然想用空白的条件来忽悠昆西╭(╯^╰)╮，不可原谅！", vbInformation) : GoTo Input1
+                If temp1 = "0" Then MsgBox("昆昆才不会被骗去1-5吃土呢！", vbInformation) : GoTo Input1
+                onceexp = Val(temp1)
+                If onceexp = 0 Then MsgBox("昆昆才不会被骗去1-5吃土呢！", vbInformation) : GoTo Input1
+            ElseIf comboBox.SelectedIndex = 4 Then
+                stage = "1-5"
+                onceexp = 1
+                MsgBox("兄弟你何苦为难自己呢，苦海无涯，回头是岸啊！", vbExclamation, “唉”)
+                End
+            Else
+                setupexp(levelText.Content.ToString, levelExp(comboBox.SelectedIndex))
+            End If
             Dim showtext4 As String
-            showtext4 = ""
-            Dim winrate As Integer
-            winrate = comboBox1.SelectedIndex
-            Select Case winrate
-                Case 0
-                    showtext4 = "SS"
-                    onceexp = onceexp * 1.2
-                Case 1
-                    showtext4 = "S"
-                    onceexp = onceexp * 1.2
-                Case 2
-                    showtext4 = "A"
-                    onceexp = onceexp * 1
-                Case 3
-                    showtext4 = "B"
-                    onceexp = onceexp * 0.8
-                Case 4
-                    showtext4 = "C"
-                    onceexp = onceexp * 0.7
-                Case 5
-                    showtext4 = "D"
-                    onceexp = onceexp * 0.5
-            End Select
-            Dim teachers As Integer
-            teachers = combobox2.SelectedIndex
-            expfrom = jianniangexp(CInt(textBoxfrom.Text))
-            expto = jianniangexp(CInt(textBoxto.Text))
-            needexp = expto - expfrom
-            flagship = flagship1.IsChecked
-            mvp = mvp1.IsChecked
-            shengjian = shengjian1.IsChecked
-            train = train1.IsChecked
-            laibixi = laibixi1.IsChecked
-            bread = bread1.IsChecked
-            ke = ke1.IsChecked
-            baiyan = baiyan1.IsChecked
-            baiyane = radioButton5.IsChecked And radioButton5.IsEnabled
-            baiyannoe = radioButton6.IsChecked And radioButton6.IsEnabled
-            xiangqu = xiangqu1.IsChecked And xiangqu1.IsEnabled
-            equip1 = weapon1.IsChecked And weapon.IsEnabled
-            equip2 = weapon2.IsChecked And weapon.IsEnabled
-            equip3 = weapon3.IsChecked And weapon.IsEnabled
-            Dim tempforke As Long
-            tempforke = onceexp
-            If (flagship And Not mvp) Then
-                onceexp = onceexp * 1.5
-            ElseIf (Not flagship And mvp) Then
-                onceexp1 = onceexp * 2
-                onceexp2 = ((onceexp1 * Val(mvpcalc.Text)) + (onceexp * (100 - (Val(mvpcalc.Text))))) * 0.01
-                onceexp = onceexp2
-            ElseIf (flagship And mvp) Then
-                onceexp1 = onceexp * 2
-                onceexp2 = ((onceexp1 * Val(mvpcalc.Text)) + (onceexp * (100 - (Val(mvpcalc.Text))))) * 0.01
-                onceexp = onceexp2 * 1.5
-            End If
-            If (train) Then
-                onceexp = onceexp * 1.07
-            End If
-            If (laibixi) Then
-                onceexp = onceexp * 1.1
-            End If
-            If (bread) Then
-                onceexp = onceexp * 1.1
-            End If
-            If (baiyan And baiyane) Then
-                onceexp = onceexp * 1.1
-            End If
-            If (baiyan And baiyannoe) Then
-                onceexp = onceexp * 1.06
-            End If
-            If (xiangqu) Then
-                onceexp = onceexp * 1.07
-            End If
-            If (flagship) Then
-                showtext1 = "旗舰"
-            Else
-                showtext1 = ""
-            End If
-            If (mvp) Then
-                showtext2 = "MVP概率" & mvpcalc.Text & "%"
-            Else
-                showtext2 = ""
-            End If
-            If (shengjian) Then
-                onceexp = onceexp * 1.5
-                tempforke = tempforke * 1.5
-                showtext3 = "经验加成15%"
-            Else
-                showtext3 = ""
-            End If
-            If (ke) Then
-                onceexp = onceexp + tempforke
-            End If
-            If (gewasi.IsChecked) Then
-                onceexp *= 2
-            End If
-            If (equip1) Then
-                onceexp = onceexp * 1.01
-            ElseIf (equip2) Then
-                onceexp = onceexp * 1.05
-            ElseIf (equip3) Then
-                onceexp = onceexp * 1.07
-            End If
-            Dim tempfortea As Long
-            tempfortea = 0
-            If (teacher1) Then
-                Select Case teacherwho.SelectedIndex
+                showtext4 = ""
+                Dim winrate As Integer
+                winrate = comboBox1.SelectedIndex
+                Select Case winrate
                     Case 0
-                        tempfortea = needexp - (onceexp * 1.5 * teachers)
+                        showtext4 = "SS"
+                        onceexp = onceexp * 1.2
                     Case 1
-                        tempfortea = needexp - (onceexp * 1.75 * teachers)
+                        showtext4 = "S"
+                        onceexp = onceexp * 1.2
                     Case 2
-                        tempfortea = needexp - (onceexp * 2 * teachers)
+                        showtext4 = "A"
+                        onceexp = onceexp * 1
+                    Case 3
+                        showtext4 = "B"
+                        onceexp = onceexp * 0.8
+                    Case 4
+                        showtext4 = "C"
+                        onceexp = onceexp * 0.7
+                    Case 5
+                        showtext4 = "D"
+                        onceexp = onceexp * 0.5
                 End Select
-            End If
-            If (tempfortea > 0 And teacher1) Then
-                times = (tempfortea / onceexp) + teachers
-            ElseIf (tempfortea <= 0 And teacher1) Then
-                While (tempfortea <= 0)
-                    MsgBox("昆西稍稍思考，发现当前条件下经验溢出，将自动提升一个目标等级计算！", vbInformation, "昆昆提示")
-                    textBoxto.Text = textBoxto.Text + 1
-                    If (textBoxto.Text > 90) Then
-                        MsgBox("目标等级大于上限！", vbCritical, "昆昆提示")
-                        Exit Sub
-                    End If
-                    expto = jianniangexp(CInt(textBoxto.Text))
-                    needexp = expto - expfrom
-                    tempfortea = needexp - (onceexp * 1.5 * teachers)
-                End While
-                times = (tempfortea / onceexp) + teachers
-            Else times = (needexp / onceexp)
-            End If
-            MsgBox("充满智慧的昆西掐指一算：" & "舰娘由等级" & textBoxfrom.Text & "升级至" & textBoxto.Text & "，共需经验值" & needexp & vbCrLf & "刷" & stage & "关卡的单个节点，在保持" & showtext1 & showtext2 & showtext3 & "战后" & showtext4 & "评价前提下," & vbCrLf & "一次经验" & onceexp & "，需要次数：" & times, vbInformation, "昆昆提示")
+                Dim teachers As Integer
+                teachers = combobox2.SelectedIndex
+                expfrom = jianniangexp(CInt(textBoxfrom.Text))
+                expto = jianniangexp(CInt(textBoxto.Text))
+                needexp = expto - expfrom
+                flagship = flagship1.IsChecked
+                mvp = mvp1.IsChecked
+                shengjian = shengjian1.IsChecked
+                train = train1.IsChecked
+                laibixi = laibixi1.IsChecked
+                bread = bread1.IsChecked
+                ke = ke1.IsChecked
+                baiyan = baiyan1.IsChecked
+                baiyane = radioButton5.IsChecked And radioButton5.IsEnabled
+                baiyannoe = radioButton6.IsChecked And radioButton6.IsEnabled
+                xiangqu = xiangqu1.IsChecked And xiangqu1.IsEnabled
+                equip1 = weapon1.IsChecked And weapon.IsEnabled
+                equip2 = weapon2.IsChecked And weapon.IsEnabled
+                equip3 = weapon3.IsChecked And weapon.IsEnabled
+                Dim tempforke As Long
+                tempforke = onceexp
+                If (flagship And Not mvp) Then
+                    onceexp = onceexp * 1.5
+                ElseIf (Not flagship And mvp) Then
+                    onceexp1 = onceexp * 2
+                    onceexp2 = ((onceexp1 * Val(mvpcalc.Text)) + (onceexp * (100 - (Val(mvpcalc.Text))))) * 0.01
+                    onceexp = onceexp2
+                ElseIf (flagship And mvp) Then
+                    onceexp1 = onceexp * 2
+                    onceexp2 = ((onceexp1 * Val(mvpcalc.Text)) + (onceexp * (100 - (Val(mvpcalc.Text))))) * 0.01
+                    onceexp = onceexp2 * 1.5
+                End If
+                If (train) Then
+                    onceexp = onceexp * 1.07
+                End If
+                If (laibixi) Then
+                    onceexp = onceexp * 1.1
+                End If
+                If (bread) Then
+                    onceexp = onceexp * 1.1
+                End If
+                If (baiyan And baiyane) Then
+                    onceexp = onceexp * 1.1
+                End If
+                If (baiyan And baiyannoe) Then
+                    onceexp = onceexp * 1.06
+                End If
+                If (xiangqu) Then
+                    onceexp = onceexp * 1.07
+                End If
+                If (flagship) Then
+                    showtext1 = "旗舰"
+                Else
+                    showtext1 = ""
+                End If
+                If (mvp) Then
+                    showtext2 = "MVP概率" & mvpcalc.Text & "%"
+                Else
+                    showtext2 = ""
+                End If
+                If (shengjian) Then
+                    onceexp = onceexp * 1.5
+                    tempforke = tempforke * 1.5
+                    showtext3 = "经验加成15%"
+                Else
+                    showtext3 = ""
+                End If
+                If (ke) Then
+                    onceexp = onceexp + tempforke
+                End If
+                If (gewasi.IsChecked) Then
+                    onceexp *= 2
+                End If
+                If (equip1) Then
+                    onceexp = onceexp * 1.01
+                ElseIf (equip2) Then
+                    onceexp = onceexp * 1.05
+                ElseIf (equip3) Then
+                    onceexp = onceexp * 1.07
+                End If
+                Dim tempfortea As Long
+                tempfortea = 0
+                If (teacher1) Then
+                    Select Case teacherwho.SelectedIndex
+                        Case 0
+                            tempfortea = needexp - (onceexp * 1.5 * teachers)
+                        Case 1
+                            tempfortea = needexp - (onceexp * 1.75 * teachers)
+                        Case 2
+                            tempfortea = needexp - (onceexp * 2 * teachers)
+                    End Select
+                End If
+                If (tempfortea > 0 And teacher1) Then
+                    times = (tempfortea / onceexp) + teachers
+                ElseIf (tempfortea <= 0 And teacher1) Then
+                    While (tempfortea <= 0)
+                        MsgBox("昆西稍稍思考，发现当前条件下经验溢出，将自动提升一个目标等级计算！", vbInformation, "昆昆提示")
+                        textBoxto.Text = textBoxto.Text + 1
+                        If (textBoxto.Text > 90) Then
+                            MsgBox("目标等级大于上限！", vbCritical, "昆昆提示")
+                            Exit Sub
+                        End If
+                        expto = jianniangexp(CInt(textBoxto.Text))
+                        needexp = expto - expfrom
+                        tempfortea = needexp - (onceexp * 1.5 * teachers)
+                    End While
+                    times = (tempfortea / onceexp) + teachers
+                Else times = (needexp / onceexp)
+                End If
+                MsgBox("充满智慧的昆西掐指一算：" & "舰娘由等级" & textBoxfrom.Text & "升级至" & textBoxto.Text & "，共需经验值" & needexp & vbCrLf & "刷" & stage & "关卡的单个节点，在保持" & showtext1 & showtext2 & showtext3 & "战后" & showtext4 & "评价前提下," & vbCrLf & "一次经验" & onceexp & "，需要次数：" & times, vbInformation, "昆昆提示")
             Else
                 tiduexp = {0, 0, 50, 110, 180, 260, 360, 480, 620, 790, 990, 1220, 1490, 1800, 2150,
 2550, 3000, 3500, 4060, 4680, 5360, 6110, 6930, 7820, 8790, 9840,
@@ -420,126 +325,28 @@ Input1:
                 MsgBox(“输入有误，请重新输入！”, vbInformation)
                 Exit Sub
             End If
-            Dim level2 As Integer
-            level2 = comboBox.SelectedIndex
-            Select Case level2
-                Case 0
-                    stage = "1-1"
-                    onceexp = 10
-                Case 1
-                    stage = "1-2"
-                    onceexp = 20
-                Case 2
-                    stage = "1-3"
-                    onceexp = 30
-                Case 3
-                    stage = "1-4"
-                    onceexp = 40
-                Case 4
-                    stage = "1-5"
-                    onceexp = 1
-                    MsgBox("兄弟你何苦为难自己呢，苦海无涯，回头是岸啊！", vbExclamation, “唉”)
-                    End
-                Case 5
-                    stage = "2-1"
-                    onceexp = 20
-                Case 6
-                    stage = "2-2"
-                    onceexp = 30
-                Case 7
-                    stage = "2-3"
-                    onceexp = 40
-                Case 8
-                    stage = "2-4"
-                    onceexp = 60
-                Case 9
-                    stage = "2-5"
-                    onceexp = 100
-                Case 10
-                    stage = "2-6"
-                    onceexp = 120
-                Case 11
-                    stage = "3-1"
-                    onceexp = 30
-                Case 12
-                    stage = "3-2"
-                    onceexp = 50
-                Case 13
-                    stage = "3-3"
-                    onceexp = 70
-                Case 14
-                    stage = "3-4"
-                    onceexp = 90
-                Case 15
-                    stage = "4-1"
-                    onceexp = 40
-                Case 16
-                    stage = "4-2"
-                    onceexp = 60
-                Case 17
-                    stage = "4-3"
-                    onceexp = 80
-                Case 18
-                    stage = "4-4"
-                    onceexp = 100
-                Case 19
-                    stage = "5-1"
-                    onceexp = 90
-                Case 20
-                    stage = "5-2"
-                    onceexp = 100
-                Case 21
-                    stage = "5-3"
-                    onceexp = 110
-                Case 22
-                    stage = "5-4"
-                    onceexp = 120
-                Case 23
-                    stage = "5-5"
-                    onceexp = 150
-                Case 24
-                    stage = "6-1"
-                    onceexp = 100
-                Case 25
-                    stage = "6-2"
-                    onceexp = 110
-                Case 26
-                    stage = "6-3"
-                    onceexp = 120
-                Case 27
-                    stage = "6-4"
-                    onceexp = 150
-                Case 28
-                    stage = "7-1"
-                    onceexp = 150
-                Case 29
-                    stage = "7-2"
-                    onceexp = 160
-                Case 30
-                    stage = "7-3"
-                    onceexp = 170
-                Case 31
-                    stage = "7-4"
-                    onceexp = 180
-                Case 32
-                    stage = "7-5"
-                    onceexp = 190
-                Case 33
-                    stage = "8-1"
-                    onceexp = 190
-                Case 34
-                    stage = "8-2"
-                    onceexp = 190
-                Case 35
-                    stage = "自定义"
-                    Dim temp1 As String
+            Dim levelExp(36) As Integer
+            levelExp = {10, 20, 30, 40, 0, 20, 30, 40, 60, 100, 120, 30, 50, 70, 90, 40, 60, 80, 100, 90,
+100, 110, 120, 150, 100, 110, 120, 150, 150, 160, 170, 180, 190, 190, 190, 190}
+            Dim levelText As ListBoxItem
+            levelText = CType(comboBox.SelectedItem, ListBoxItem)
+            If comboBox.SelectedIndex = 36 Then
+                stage = "自定义"
+                Dim temp1 As String
 Input3:
-                    temp1 = InputBox("请输入关卡基础经验(即SS胜经验)", "昆昆提示")
-                    If temp1 = "" Then MsgBox("哼，居然想用空白的条件来忽悠昆西╭(╯^╰)╮，不可原谅！", vbInformation) : GoTo Input3
-                    If temp1 = "0" Then MsgBox("这样的条件下是没有提督经验的哦(⊙o⊙)", vbInformation) : GoTo Input3
-                    onceexp = Val(temp1)
-                    If onceexp = 0 Then MsgBox("这样的条件下是没有提督经验的哦(⊙o⊙)", vbInformation) : GoTo Input3
-            End Select
+                temp1 = InputBox("请输入关卡基础经验(即SS胜经验)", "昆昆提示")
+                If temp1 = "" Then MsgBox("哼，居然想用空白的条件来忽悠昆西╭(╯^╰)╮，不可原谅！", vbInformation) : GoTo Input3
+                If temp1 = "0" Then MsgBox("这样的条件下是没有提督经验的哦(⊙o⊙)", vbInformation) : GoTo Input3
+                onceexp = Val(temp1)
+                If onceexp = 0 Then MsgBox("这样的条件下是没有提督经验的哦(⊙o⊙)", vbInformation) : GoTo Input3
+            ElseIf comboBox.SelectedIndex = 4 Then
+                stage = "1-5"
+                onceexp = 1
+                MsgBox("兄弟你何苦为难自己呢，苦海无涯，回头是岸啊！", vbExclamation, “唉”)
+                End
+            Else
+                setupexp(levelText.Content.ToString, levelExp(comboBox.SelectedIndex))
+            End If
             Dim showtext4 As String
             showtext4 = ""
             Dim winrate As Integer

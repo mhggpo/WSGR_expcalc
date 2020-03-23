@@ -6,7 +6,7 @@
         xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore"
         xmlns:local="clr-namespace:经验计算"
         mc:Ignorable="d"
-        Title="经验计算器 ver 2.3" Height="622.933" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="20180221040238918_easyicon_net_96.ico">
+        Title="经验计算器 ver 2.4" Height="622.933" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="20180221040238918_easyicon_net_96.ico">
     <Grid Margin="0,0,-175.4,-143.6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -88,6 +88,7 @@
             <ListBoxItem Content="7-5"/>
             <ListBoxItem Content="8-1"/>
             <ListBoxItem Content="8-2"/>
+            <ListBoxItem Content="8-3"/>
             <ListBoxItem Content="自定义"/>
         </ComboBox>
         <Label x:Name="label_Copy3" Content="关卡选择" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="466,39,0,0" Width="70"/>
