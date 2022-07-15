@@ -2,7 +2,8 @@
     Dim expfrom, expto, needexp, onceexp, onceexp1, onceexp2, times As Long
     Dim jianniangexp(111) As Long
     Dim tiduexp(252) As Long
-    Dim flagship, train, mvp, shengjian, bread, laibixi, ke, baiyan, baiyane, baiyannoe, lanli, lanliu, lanlinou, xiangqu, equip1, equip2, equip3, teacher1 As Boolean
+    Dim flagship, train, mvp, shengjian, bread, laibixi, ke, baiyan, baiyane, baiyannoe, lanli, lanliu, lanlinou, xiangqu, equip1, equip2, equip3, teacher1, custom As Boolean
+
     Public Sub setupexp(ByVal str1 As String, ByVal num1 As Integer)
         stage = str1
         onceexp = num1
@@ -101,9 +102,9 @@
 931600, 985600, 1042800, 1103400, 1167600, 1235500,
 1307300, 1379100, 1450900, 1522700, 1594500, 1666300,
 1738100, 1809900, 1881700, 1953500}
-            Dim levelExp(36) As Integer
+            Dim levelExp(39) As Integer
             levelExp = {30, 50, 80, 120, 0, 100, 120, 150, 200, 400, 420, 150, 180, 220, 300, 250, 300, 330,
-360, 350, 370, 400, 420, 450, 400, 410, 420, 500, 450, 480, 520, 560, 560, 600, 600, 600, 600, 600, 720}
+360, 350, 370, 400, 420, 450, 400, 410, 420, 500, 450, 480, 520, 560, 560, 600, 600, 600, 600, 600, 660}
             Dim levelText As ListBoxItem
             levelText = CType(comboBox.SelectedItem, ListBoxItem)
             If Val(textBoxfrom.Text) >= 1 And Val(textBoxfrom.Text) <= Val(textBoxto.Text) Then
@@ -182,8 +183,9 @@ Input1:
                 xiangqu = xiangqu1.IsChecked And xiangqu1.IsEnabled
                 equip1 = weapon1.IsChecked And weapon.IsEnabled
                 equip2 = weapon2.IsChecked And weapon.IsEnabled
-                equip3 = weapon3.IsChecked And weapon.IsEnabled
-                Dim tempforke As Long
+            equip3 = weapon3.IsChecked And weapon.IsEnabled
+            custom = whatever.IsChecked
+            Dim tempforke As Long
                 tempforke = onceexp
                 If (flagship And Not mvp) Then
                     onceexp = onceexp * 1.5
@@ -202,10 +204,13 @@ Input1:
                 If (laibixi) Then
                     onceexp = onceexp * 1.1
                 End If
-                If (bread) Then
-                    onceexp = onceexp * 1.1
-                End If
-                If (baiyan And baiyane) Then
+            If (bread) Then
+                onceexp = onceexp * 1.1
+            End If
+            If (custom) Then
+                onceexp = onceexp * (1.0 + Val(CustomNum.Text) * 0.01)
+            End If
+            If (baiyan And baiyane) Then
                     onceexp = onceexp * 1.1
                 End If
                 If (baiyan And baiyannoe) Then
@@ -325,9 +330,9 @@ Input1:
                 MsgBox(“输入有误，请重新输入！”, vbInformation)
                 Exit Sub
             End If
-            Dim levelExp(36) As Integer
+            Dim levelExp(39) As Integer
             levelExp = {10, 20, 30, 40, 0, 20, 30, 40, 60, 100, 120, 30, 50, 70, 90, 40, 60, 80, 100, 90,
-100, 110, 120, 150, 100, 110, 120, 150, 150, 160, 170, 180, 190, 190, 190, 190}
+100, 110, 120, 150, 100, 110, 120, 150, 150, 160, 170, 180, 190, 190, 190, 190, 190, 190, 210}
             Dim levelText As ListBoxItem
             levelText = CType(comboBox.SelectedItem, ListBoxItem)
             If comboBox.SelectedIndex = 36 Then

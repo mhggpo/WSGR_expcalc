@@ -63,3 +63,4 @@ C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\obj\Release\经验计算.pdb
 C:\Users\mhggpo\Source\Repos\WSGR_expcalc\obj\Release\WSGR_expcalc.vbprojAssemblyReference.cache
 C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\obj\Release\WSGR_expcalc.vbproj.CoreCompileInputs.cache
 C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\obj\Release\WSGR_expcalc.vbproj.SuggestedBindingRedirects.cache
+C:\Users\mhggp\Documents\GitHub\WSGR_expcalc\obj\Release\WSGR_expcalc.vbproj.AssemblyReference.cache
