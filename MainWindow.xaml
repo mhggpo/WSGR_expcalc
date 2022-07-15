@@ -50,8 +50,10 @@
             <RadioButton x:Name="radioButton5" Content="E国CV" HorizontalAlignment="Left" Margin="21,16,0,0" VerticalAlignment="Top" IsEnabled="False" GroupName="baiyan"/>
             <CheckBox x:Name="baiyan1" Content="CV经验加成Lv3（百眼巨人）" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="184"/>
             <RadioButton x:Name="radioButton6" Content="非E国CV" HorizontalAlignment="Left" Margin="21,31,0,0" VerticalAlignment="Top" IsEnabled="False" GroupName="baiyan"/>
+            <TextBox x:Name="CustomNum" HorizontalAlignment="Left" Margin="115,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" Text="0"/>
         </Grid>
         <CheckBox x:Name="xiangqu1" Content="多面训练舰（香取改）" HorizontalAlignment="Left" Margin="50,225,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="whatever" Content="自定义加成（%）" HorizontalAlignment="Left" Margin="50,245,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="523,39,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
             <ListBoxItem Content="1-1"/>
             <ListBoxItem Content="1-2"/>
