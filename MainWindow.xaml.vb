@@ -103,7 +103,7 @@
 1738100, 1809900, 1881700, 1953500}
             Dim levelExp(36) As Integer
             levelExp = {30, 50, 80, 120, 0, 100, 120, 150, 200, 400, 420, 150, 180, 220, 300, 250, 300, 330,
-360, 350, 370, 400, 420, 450, 400, 410, 420, 500, 450, 480, 520, 560, 560, 600, 600, 600}
+360, 350, 370, 400, 420, 450, 400, 410, 420, 500, 450, 480, 520, 560, 560, 600, 600, 600, 600, 600, 720}
             Dim levelText As ListBoxItem
             levelText = CType(comboBox.SelectedItem, ListBoxItem)
             If Val(textBoxfrom.Text) >= 1 And Val(textBoxfrom.Text) <= Val(textBoxto.Text) Then
