@@ -124,7 +124,7 @@
                 MsgBox(“输入有误，请重新输入！”, vbInformation)
                 Exit Sub
             End If
-            If comboBox.SelectedIndex = 36 Then
+            If comboBox.SelectedIndex = 39 Then
                 stage = "自定义"
                 Dim temp1 As String
 Input1:
@@ -335,7 +335,7 @@ Input1:
 100, 110, 120, 150, 100, 110, 120, 150, 150, 160, 170, 180, 190, 190, 190, 190, 190, 190, 210}
             Dim levelText As ListBoxItem
             levelText = CType(comboBox.SelectedItem, ListBoxItem)
-            If comboBox.SelectedIndex = 36 Then
+            If comboBox.SelectedIndex = 39 Then
                 stage = "自定义"
                 Dim temp1 As String
 Input3:
